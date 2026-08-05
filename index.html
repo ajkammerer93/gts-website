@@ -123,6 +123,14 @@
   }
   .card p{margin:0;color:var(--muted);font-size:.94rem}
   .note{margin:26px 0 0;color:var(--muted);font-size:.86rem;max-width:70ch}
+  .card h3 a{color:var(--ink);text-decoration:none;border-bottom:2px solid rgba(15,125,140,.28)}
+  .card h3 a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+  .grid.two .card{display:flex;flex-direction:column}
+  .card p.card-meta{
+    margin:auto 0 0;padding-top:18px;font-size:.85rem;color:var(--muted)
+  }
+  .card p.card-meta a{color:var(--accent);text-decoration:none}
+  .card p.card-meta a:hover{text-decoration:underline}
 
   /* ---------- about ---------- */
   .about-grid{display:grid;gap:44px;grid-template-columns:1.35fr .95fr;align-items:start}
@@ -183,6 +191,7 @@
       <a href="#sectors">Sectors</a>
       <a href="#about">About</a>
       <a href="#publications">Publications</a>
+      <a href="#work">Work</a>
       <a href="#contact" class="nav-cta">Contact</a>
     </nav>
   </div>
@@ -390,6 +399,27 @@
           Kammerer, A.J. (2017). <span class="v">M.S. thesis, Coastal Marine and Wetland Studies, Coastal Carolina University.</span>
         </li>
       </ul>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="wrap">
+      <div class="eyebrow">Selected work</div>
+      <h2>Things you can go look at</h2>
+      <p class="section-lede">Public, working code and systems &mdash; rather than a description of them.</p>
+
+      <div class="grid two">
+        <div class="card">
+          <h3><a href="https://freesurfforecast.com" rel="noopener">Free Surf Forecast</a></h3>
+          <p>A personal project that doubles as a working demonstration of the full pipeline: a public forecast site covering 145 coastal locations, built on Open-Meteo wave and weather model output, NOAA CO-OPS tide predictions, and NDBC buoy observations including directional and energy spectra, presented through interactive charts and maps. The same shape as a commercial met-ocean product &mdash; ingest model and observational data, reconcile the sources, and put the result in front of someone who has to make a decision.</p>
+          <p class="card-meta">Source: <a href="https://github.com/ajkammerer93" rel="noopener">github.com/ajkammerer93</a></p>
+        </div>
+        <div class="card">
+          <h3><a href="https://github.com/NOAA-CO-OPS/Next-Gen-NOS-OFS-Skill-Assessment" rel="noopener">NOS OFS Skill Assessment</a></h3>
+          <p>Open-source Python software for near real-time evaluation of NOAA Operational Forecast System guidance against observations, developed by NOAA's Center for Operational Oceanographic Products and Services and the Office of Coast Survey and released into the public domain. AJ contributed to the package while supporting the program as a contractor.</p>
+          <p class="card-meta">Code contributions under <a href="https://github.com/kammereraj" rel="noopener">github.com/kammereraj</a></p>
+        </div>
+      </div>
     </div>
   </section>
 
